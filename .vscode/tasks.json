@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                "C:\\Program Files\\MySQL\\mysql-9.0.1-winx64\\include",
+                "-L",
+                "C:\\Program Files\\MySQL\\mysql-9.0.1-winx64\\lib",
+                "-lmysqlclient" // or -lmysqlcppconn depending on your setup
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
+
